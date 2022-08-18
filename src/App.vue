@@ -1,13 +1,12 @@
 <template>
 <div v-if="tokenStatus">
   <nav >
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <!-- <router-link to="/salary">salarie</router-link> |
+    <router-link to="/admin">admin</router-link> -->
   </nav>
   <router-view/>
   </div>
   <div v-else>
-
   <Login/>
   </div>
 </template>

@@ -22,19 +22,20 @@
         </template>
 
 <script>
-import axios  from "axios";
+import axios  from 'axios';
 import router from '@/router';
-import about from '@/views/AboutView.vue'
+import AdminView from '@/views/AdminView.vue';
 
 export default {
   name: 'LoginView',
   components: {
-    about
+    AdminView
   },
   data () {
     return {
       email: '',
       password: '',
+      type:'',
       failed: false
     }
   },
@@ -56,7 +57,7 @@ export default {
                 localStorage.email = email.value;
                 localStorage.password = password.value;
                         console.log(localStorage.email);
-                router.push({ name: 'about' })
+                router.push({ name: 'admin' })
         }       
         
   })
